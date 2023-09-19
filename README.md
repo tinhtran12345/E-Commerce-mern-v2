@@ -4,10 +4,32 @@
 
 ## Công nghệ sử dụng
 
--   front-end: reacjs+vite, redux, redux-toolkit, axios, ...
+-   front-end: reacjs+vite, redux, redux-toolkit, axios, Tailwind CSS ...
 
--   back-end: nodejs, express, jwt, ... database: MongoDb, ODM: mongoose
+-   back-end: nodejs, express, jwt, nodemailer, ... database: MongoDb, ODM: mongoose
 
-## Link demo: https://digital-world-2.myshopify.com/
+## Design DB
 
-## Link tutorial: https://www.youtube.com/watch?v=zNrULfl_TyU&list=PLGcINiGdJE91PBOpuncH7rmkVjlmPXV4d&ab_channel=hip06
+-   Prepare data:
+
+```
+https://github.com/tinhtran12345/scrapper-data-fshop.git
+```
+
+-   Link Database
+
+```
+https://dbdiagram.io/d/64ff218e02bd1c4a5e59ac7b
+```
+
+## Link demo:
+
+```
+https://digital-world-2.myshopify.com/
+```
+
+## Link tutorial:
+
+```
+https://www.youtube.com/watch?v=zNrULfl_TyU&list=PLGcINiGdJE91PBOpuncH7rmkVjlmPXV4d&ab_channel=hip06
+```
