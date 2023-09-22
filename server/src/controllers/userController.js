@@ -221,3 +221,6 @@ export const getUsers = asyncHandler(async (req, res) => {
         msg: user ? user : "Something went wrong!",
     });
 });
+
+//  user update own profile
+export const updateUser = asyncHandler(async (req, res) => {});
