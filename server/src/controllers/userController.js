@@ -223,5 +223,22 @@ export const getUsers = asyncHandler(async (req, res) => {
 });
 
 //  user update own profile
-export const updateUser = asyncHandler(async (req, res) => {});
+
+// flow: user se nhap vào các trương {username, phone,cart, address ... } => req.body
+//  --> req.body không có giá trị => Missing input
+//  --> update => trả về gia trị được update
+export const updateUser = asyncHandler(async (req, res) => {
+    const { _id } = req.user;
+    if (Object.keys(req.body).length === 0) {
+        return res.status(400).json({ success: false, msg: "Missing inputs!" });
+    }
+
+    const response = await User.findByIdAndUpdate(_id, req.body, {
+        new: true,
+    }).select("-password -role -refreshToken");
+    return res.status(200).json({
+        success: response ? true : false,
+        msg: response ? response : "Something went wrong!",
+    });
+});
 export const updateUserByAdmin = asyncHandler(async (req, res) => {});
