@@ -8,6 +8,7 @@ import {
     refreshAccessToken,
     register,
     resetPassword,
+    updateUser,
 } from "../controllers/userController.js";
 import { isAdmin, verifyToken } from "../middlewares/verifyToken.js";
 
@@ -21,4 +22,5 @@ router.post("/refreshAccessToken", refreshAccessToken);
 router.get("/forgotPassword", forgotPassword);
 router.put("/resetPassword", resetPassword);
 router.get("/getUsers", [verifyToken, isAdmin], getUsers);
+router.put("/current", [verifyToken], updateUser);
 export default router;
