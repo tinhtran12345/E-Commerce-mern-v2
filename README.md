@@ -22,14 +22,18 @@ https://github.com/tinhtran12345/scrapper-data-fshop.git
 https://dbdiagram.io/d/64ff218e02bd1c4a5e59ac7b
 ```
 
-## Link demo:
+## Website tham khảo:
 
 ```
 https://digital-world-2.myshopify.com/
+
+https://fptshop.com.vn/
 ```
 
 ## Link tutorial:
 
 ```
+server:  https://github.com/thuanphatt/MERN-stack-eCommerce
+client:  https://github.com/shakilhasan/sabil/blob/develop/.github/workflows/codeql-analysis.yml
 https://www.youtube.com/watch?v=zNrULfl_TyU&list=PLGcINiGdJE91PBOpuncH7rmkVjlmPXV4d&ab_channel=hip06
 ```

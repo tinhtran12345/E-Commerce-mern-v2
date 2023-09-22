@@ -17,9 +17,9 @@ const userSchema = new mongoose.Schema(
             require: true,
             unique: true,
         },
+        // Sdt
         mobile: {
             type: String,
-            require: true,
             unique: true,
         },
         password: {
@@ -35,6 +35,7 @@ const userSchema = new mongoose.Schema(
             default: [],
         },
         address: [{ type: mongoose.Types.ObjectId, ref: "Address" }],
+        // list product: người dùng muốn mua
         wishlist: [{ type: mongoose.Types.ObjectId, ref: "Product" }],
         isBlocked: {
             type: Boolean,
@@ -59,6 +60,7 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.pre("save", async function (next) {
+    // console.log(this.isModified("password"));
     if (!this.isModified("password")) {
         return next();
     }
@@ -68,9 +70,11 @@ userSchema.pre("save", async function (next) {
 
 userSchema.methods = {
     isCorrectPassword: async function (password) {
-        return await bcrypt.compare(password, this.password);
+        console.log(this.password);
+        const check = await bcrypt.compare(password, this.password);
+        return check;
     },
-    //  create resetToken after updating passwordResetToken and passwordResetExpire.
+    //  create resetToken and then  updating passwordResetToken and passwordResetExpire.
     createPasswordChangedToken: function () {
         const resetToken = crypto.randomBytes(32).toString("hex");
         this.passwordResetToken = crypto
