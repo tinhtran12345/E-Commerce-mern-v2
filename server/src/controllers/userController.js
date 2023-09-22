@@ -224,3 +224,4 @@ export const getUsers = asyncHandler(async (req, res) => {
 
 //  user update own profile
 export const updateUser = asyncHandler(async (req, res) => {});
+export const updateUserByAdmin = asyncHandler(async (req, res) => {});
