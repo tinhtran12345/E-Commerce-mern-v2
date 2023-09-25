@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema(
             type: Array,
             default: [],
         },
-        address: [{ type: mongoose.Types.ObjectId, ref: "Address" }],
+        address: { type: Array, default: [] },
         // list product: người dùng muốn mua
         wishlist: [{ type: mongoose.Types.ObjectId, ref: "Product" }],
         isBlocked: {
@@ -70,7 +70,6 @@ userSchema.pre("save", async function (next) {
 
 userSchema.methods = {
     isCorrectPassword: async function (password) {
-        console.log(this.password);
         const check = await bcrypt.compare(password, this.password);
         return check;
     },

@@ -241,4 +241,21 @@ export const updateUser = asyncHandler(async (req, res) => {
         msg: response ? response : "Something went wrong!",
     });
 });
-export const updateUserByAdmin = asyncHandler(async (req, res) => {});
+
+// admin se click vào user mà muôn update => uid params và link sang page để update =>input: req.params, req.body
+// --> req.body: {}=> Missing input
+// --> update và trả về response
+export const updateUserByAdmin = asyncHandler(async (req, res) => {
+    const { uid } = req.params;
+    if (Object.keys(req.body).length === 0) {
+        return res.status(400).json({ success: false, msg: "Missing inputs!" });
+    }
+
+    const response = await User.findByIdAndUpdate(uid, req.body, {
+        new: true,
+    }).select("-password -role -refreshToken");
+    return res.status(200).json({
+        success: response ? true : false,
+        msg: response ? response : "Something went wrong!",
+    });
+});

@@ -36,4 +36,6 @@ https://fptshop.com.vn/
 server:  https://github.com/thuanphatt/MERN-stack-eCommerce
 client:  https://github.com/shakilhasan/sabil/blob/develop/.github/workflows/codeql-analysis.yml
 https://www.youtube.com/watch?v=zNrULfl_TyU&list=PLGcINiGdJE91PBOpuncH7rmkVjlmPXV4d&ab_channel=hip06
+
+https://github.com/mohamedsamara/mern-ecommerce
 ```
