@@ -3,6 +3,7 @@
         "id": 0,
         "link": "https://fptshop.com.vn/dien-thoai",
         "name": "ĐIỆN THOẠI",
+        "image": "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/9/14/638302786719525352_ip-15-pro-max-dd.jpg",
         "brands": [
             "Apple (iPhone)",
             "Samsung",
@@ -19,6 +20,7 @@
     {
         "id": 1,
         "link": "https://fptshop.com.vn/may-tinh-xach-tay",
+        "image": "https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/3/3/638134647806744549_hp-240-g9-bac-dd.jpg",
         "name": "LAPTOP",
         "brands": [
             "Apple (MacBook)",
@@ -41,6 +43,7 @@
         "id": 2,
         "link": "https://fptshop.com.vn/may-tinh-bang",
         "name": "MÁY TÍNH BẢNG",
+        "image": "https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/12/6/638059452014421919_ipad-gen-9-wifi-dd.jpg",
         "brands": [
             "Apple (iPad)",
             "Samsung",
