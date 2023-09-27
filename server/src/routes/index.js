@@ -2,12 +2,14 @@ import userRoute from "./userRouter.js";
 
 import productRouter from "./productRouter.js";
 import productCategoryRouter from "./productCategoryRouter.js";
+// import insertDataRouter from "./insertDataRouter.js";
 import { errHandler, notFound } from "../middlewares/errHandler.js";
 
 const initRoutes = (app) => {
     app.use("/api/user", userRoute);
     app.use("/api/product", productRouter);
     app.use("/api/product-category", productCategoryRouter);
+    // app.use("/api/insert", insertDataRouter);
 
     app.use(notFound);
     app.use(errHandler);

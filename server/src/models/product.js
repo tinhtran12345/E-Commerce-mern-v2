@@ -154,7 +154,7 @@ const productSchema = new mongoose.Schema(
 
         // evaluate
         totalRatings: {
-            type: Number,
+            type: String,
             default: 0,
         },
     },

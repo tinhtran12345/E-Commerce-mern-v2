@@ -10,11 +10,11 @@ const categorySchema = new mongoose.Schema(
         },
         brands: {
             type: Array,
-            required: true,
+            // required: true,
         },
         image: {
             type: String,
-            required: true,
+            // required: true,
         },
     },
     { timestamps: true }

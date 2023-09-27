@@ -9,6 +9,7 @@ import {
     uploadImagesProduct,
 } from "../controllers/productController.js";
 import { isAdmin, verifyToken } from "../middlewares/verifyToken.js";
+import uploadCloud from "../config/cloudinaryConfig.js";
 
 const router = express.Router();
 
@@ -18,6 +19,7 @@ router.post("/", [verifyToken, isAdmin], createProduct);
 router.put(
     "/uploading-image/:pid",
     [verifyToken, isAdmin],
+    uploadCloud.array("images", 10),
     uploadImagesProduct
 );
 router.put("/:pid", [verifyToken, isAdmin], updateProduct);
